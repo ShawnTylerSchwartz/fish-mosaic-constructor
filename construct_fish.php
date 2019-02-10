@@ -15,12 +15,7 @@
 		// $name = md5($file) . ".jpg";
 		$name = $noslash[1] . "_" . $sepgenus[1] . "_" . $nospace[1];
 
-	echo "<h2>Are you satisified with the output?</h2>";
-	echo "<p class='lead'>Note: If a <em>sampling mosaic square</em> has any part of the background (spill-over) that is not a part of the fish, please try again. If you are unable to sample the fish without the background, please click <strong>at the bottom of the page</strong> to note this fish in the system for <u>further review</u>.</p>";
-	echo "<a href='fish_list.php?user=" . $user_email . '&' . SID . "' class='btn btn-success'>Yes, next fish <i class='fas fa-forward'></i></a>";
-	echo "&nbsp; &nbsp;";
-	echo "<a href='scale_fish.php?image=" . $img_path . '&user=' . $user_email . '&' . SID . "' class='btn btn-danger'>No, redo <i class='fas fa-undo'></i></a>";
-	echo "<br /><br />";
+	echo "<h2>Fish Mosaic Breakdown:</h2>";
 
 	$descriptions = array();
 
@@ -46,16 +41,16 @@
 
 
 <h2>Constructed Fish Mosaic:</h2>
-<div id="img-out" style="background-color: transparent; width: 375px;"></div>
+<div id="img-out" style="background-color: transparent; width: 500px;"></div>
 
-<div class="constructed-fish-container" id="constructed-fish-container" style="background-color: transparent; width: 375px; height: 250px;">
+<div class="constructed-fish-container" id="constructed-fish-container" style="background-color: transparent; width: 500px; height: 400px;">
 	<?php
 		list($width, $height, $type, $attr) = getimagesize("fish_output/1_" . $noslash[1] . "/" . $name);
 
 //width: 450px; 
 		$resize_factor_for_eye_slots = $width / 2;
 
-		echo "<div style='padding-bottom: 83px;'></div>";
+		echo "<div style='padding-bottom: 150px;'></div>";
 		echo "<img src='fish_output/7_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 7.5px; width: " . $resize_factor_for_eye_slots . "px; height: " . $resize_factor_for_eye_slots . "px;' />";
 		echo "<br />";
 		echo "<img src='fish_output/8_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -9.5px; width: " . $resize_factor_for_eye_slots . "px; height: " . $resize_factor_for_eye_slots . "px;' />"; 
@@ -63,13 +58,19 @@
 		echo "<img src='fish_output/2_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px;' />";
 		echo "<img src='fish_output/3_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px;' />";
 		echo "<img src='fish_output/4_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px;' />";
-		/*echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -96px; left: -138px;' />";
-		echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 42px; left: -207px;' />";*/
-		echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -165px; left: 172px;' />";
-		echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; left: 103px;' />";
+		echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -96px; left: -138px;' />";
+		echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 42px; left: -207px;' />";
+		// echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -165px; left: 172px;' />";
+		// echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; left: 103px;' />";
 	?>
 </div>
-<button id="savemosaicbutton">Save fish</button>
+	<br /><br />
+	<button id="savemosaicbutton" class="btn btn-success">Save Fish to Server <i class="fas fa-file-upload"></i></button>
+	&nbsp;&nbsp;
+	<?php 
+		echo "<a href='fish_list.php?user=" . $user_email . '&' . SID . "' class='btn btn-success'>Next fish <i class='fas fa-forward'></i></a>";
+	?>
+	<br /><br />
 	<script>
 
 	mosaicoutput = document.getElementById('constructed-fish-container');
