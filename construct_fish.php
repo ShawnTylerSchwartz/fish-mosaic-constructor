@@ -13,7 +13,10 @@
 		$sepgenus = explode("_", $noslash[2]);
 		
 		// $name = md5($file) . ".jpg";
-		$name = $noslash[1] . "_" . $sepgenus[1] . "_" . $nospace[1];
+		//$name = $noslash[1] . "_" . $sepgenus[1] . "_" . $nospace[1]; // ****USE THIS FOR MATCHING THE DIRECTORY OF INPUT
+
+		//TEMP OVERRIDE: (DO NOT USE FOR GENERALIZED FISH DIRECTORIES)
+		$name = "curated-chaetodontidae-list_" . $sepgenus[1] . "_" . $nospace[1];
 
 	echo "<h2>Fish Mosaic Breakdown:</h2>";
 
@@ -45,6 +48,7 @@
 
 <div class="constructed-fish-container" id="constructed-fish-container" style="background-color: transparent; width: 500px; height: 400px;">
 	<?php
+		/** HOPSCOTCH MOSAIC CONSTRUCTION CODE: (START)
 		list($width, $height, $type, $attr) = getimagesize("fish_output/1_" . $noslash[1] . "/" . $name);
 
 //width: 450px; 
@@ -62,6 +66,16 @@
 		echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 43px; left: -210px; width: 70px; height: 70px;' />";
 		// echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -165px; left: 172px;' />";
 		// echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; left: 103px;' />";
+		HOPSCOTCH MOSAIC CONSTRUCTION CODE: (END) **/
+
+		// 4-SQUARE MOSAIC CONSTRUCTION CODE: (START)
+		echo "<div style='padding-bottom: 150px;'></div>";
+		echo "<img src='fish_output/2_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 7.5px; width: 100px; height: 100px;' />";
+		echo "<img src='fish_output/3_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 7.5px; width: 100px; height: 100px;' />";
+		echo "<br />";
+		echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 7.5px; width: 100px; height: 100px;' />";
+		echo "<img src='fish_output/4_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 7.5px; width: 100px; height: 100px;' />";
+		// 4-SQUARE MOSAIC CONSTRUCTION CODE: (END)
 	?>
 </div>
 	<br /><br />
