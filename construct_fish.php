@@ -51,15 +51,15 @@
 		$resize_factor_for_eye_slots = $width / 2;
 
 		echo "<div style='padding-bottom: 150px;'></div>";
-		echo "<img src='fish_output/7_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 7.5px; width: " . $resize_factor_for_eye_slots . "px; height: " . $resize_factor_for_eye_slots . "px;' />";
+		echo "<img src='fish_output/7_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 7.5px; width: 35px; height: 35px;' />";
 		echo "<br />";
-		echo "<img src='fish_output/8_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -9.5px; width: " . $resize_factor_for_eye_slots . "px; height: " . $resize_factor_for_eye_slots . "px;' />"; 
-		echo "<img src='fish_output/1_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px;' />";
-		echo "<img src='fish_output/2_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px;' />";
-		echo "<img src='fish_output/3_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px;' />";
-		echo "<img src='fish_output/4_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px;' />";
-		echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -96px; left: -138px;' />";
-		echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 42px; left: -207px;' />";
+		echo "<img src='fish_output/8_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -9.5px; width: 35px; height: 35px;' />"; 
+		echo "<img src='fish_output/1_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; width: 70px; height: 70px;' />";
+		echo "<img src='fish_output/2_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; width: 70px; height: 70px;' />";
+		echo "<img src='fish_output/3_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; width: 70px; height: 70px;' />";
+		echo "<img src='fish_output/4_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; width: 70px; height: 70px;' />";
+		echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -97px; left: -140px; width: 70px; height: 70px;' />";
+		echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: 43px; left: -210px; width: 70px; height: 70px;' />";
 		// echo "<img src='fish_output/5_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -165px; left: 172px;' />";
 		// echo "<img src='fish_output/6_" . $noslash[1] . "/" . $name . "' style='position: relative; top: -27px; left: 103px;' />";
 	?>
